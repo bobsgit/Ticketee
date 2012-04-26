@@ -17,3 +17,7 @@ end
 Then /^I should see "([^"]*)"$/ do |text|
   page.should have_content(text)
 end
+
+Then /^I should be on the project page for "([^"]*)"$/ do |name|
+  current_path.should match(project_path(Project.find_by_name(name)))
+end
