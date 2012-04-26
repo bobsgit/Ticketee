@@ -21,3 +21,7 @@ end
 Then /^I should be on the project page for "([^"]*)"$/ do |name|
   current_path.should match(project_path(Project.find_by_name(name)))
 end
+
+Given /^there is a project called "([^"]*)"$/ do |name|
+  FactoryGirl.create(:project, name: name)
+end
