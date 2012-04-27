@@ -9,7 +9,7 @@ Feature: Editing Projects
 		When I follow "TextMate 2"
 		And I follow "Edit Project"
 		
-	Scenario: Updateing a project
+	Scenario: Updating a project
 		And I fill in "Name" with "TextMate 2 beta"
 		And I press "Update Project"
 		Then I should see "Project has been updated."
